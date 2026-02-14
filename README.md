@@ -1,5 +1,8 @@
 CpG Island Finder - CS50 Final Project
 
+Video demo
+Watch the demo here: https://youtu.be/UF-bCUwawfg?si=JaxcpJis2smxkcvw
+
 This repo holds my final project for CS50:
 Introduction to Programming with Python. 
 It's a simple Python tool for finding CpG islands in DNA sequences from FASTA files.
