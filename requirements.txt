@@ -1,0 +1,8 @@
+# CpG island finder - CS50 Final Project
+# basic version only uses Python standard library
+# so no external packages are required :)
+
+# If you want to add extra stuff later, you can use thses:
+# numpy>=1.21.0     # for faster number crunching
+# matplotlib>=3.5.0  # to plot GC content / CpG islands
+# biopython>=1.79    # for more bioinformatics tools and parsers

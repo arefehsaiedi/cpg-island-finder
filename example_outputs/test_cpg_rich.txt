@@ -1,0 +1,34 @@
+PS C:\Users\10\Desktop\genomics> python main.py test_fasta/test_cpg_rich.fasta -w 50 -g 0.5 -r 0.6
+Loading DNA sequence...
+Loaded 490 bases from cpg_rich_test
+Running analysis for CpG islands...
+Total islands found: 1
+Found 1 potential CpG island(s)!
+
+===================================
+===================================
+CpG islands finder
+===================================
+sequence : cpg_rich_test
+length : 490 bp
+time : 2026-02-11 12:13:40:
+
+summary
+------
+number of islands : 1
+total islands bp    : 490 bp
+coverage            : 100.00%
+avg length          : 490.0 bp
+avg GC              : 100.00%
+avg CpG ratio       : 1.973
+
+islands (positions are 0-based):
+--------------------------------
+id  start   end    len  GC%   ratio
+--  -----   -----  ---- ----- -----
+1   0       490     490    100.0   1.973
+
+island sequence (first 50 bp):
+------------------------------
+1. CGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCGCG
+========================================

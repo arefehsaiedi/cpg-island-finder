@@ -1,0 +1,37 @@
+PS C:\Users\10\Desktop\genomics> python main.py test_fasta/brca1_sequence.fasta -w 50 -g 0.5 -r 0.6
+Loading DNA sequence...
+Loaded 7088 bases from NM_007294.4 Homo sapiens BRCA1 DNA repair associated (BRCA1), transcript variant 1, mRNA
+Running analysis for CpG islands...
+Total islands found: 3
+Found 3 potential CpG island(s)!
+
+===================================
+===================================
+CpG islands finder
+===================================
+sequence : NM_007294.4 Homo sapiens BRCA1 DNA repair associated (BRCA1), transcript variant 1, mRNA
+length : 7088 bp
+time : 2026-02-11 12:15:37:
+
+summary
+------
+number of islands : 3
+total islands bp    : 197 bp
+coverage            : 2.78%
+avg length          : 65.7 bp
+avg GC              : 50.00%
+avg CpG ratio       : 0.652
+
+islands (positions are 0-based):
+--------------------------------
+id  start   end    len  GC%   ratio
+--  -----   -----  ---- ----- -----
+1   508     558     50     50.0    0.667
+2   3821    3890    69     50.0    0.648
+3   4707    4785    78     50.0    0.641
+
+island sequence (first 50 bp):
+------------------------------
+2. ATACCTTCTCAGTCTACTAGGCATAGCACCGTTGCTACCGAGTGTCTGTCTAAGAACACAGAGGAGAAT
+3. TTGATGTGGAGGAGCAACAGCTGGAAGAGTCTGGGCCACACGATTTGACGGAAACATCTTACTTGCCAAGGCAAGATC
+========================================

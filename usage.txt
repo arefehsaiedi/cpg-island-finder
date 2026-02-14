@@ -1,0 +1,25 @@
+# run with default settings
+python main.py sequence.fasta
+
+# change window size (e.g. 300 bp)
+python main.py sequence.fasta -w 300
+
+# change GC cutoff and CpG ratio (stricter)
+python main.py sequence.fasta -g 0.55 -r 0.7
+ 
+# save report to a file instead of printing 
+python main.py sequence.fasta -o report.txt
+
+# combine options
+python main.py sequence.fasta -w 200 -g 0.5 -r 0.6 -o my_report.txt
+
+# test with included examples 
+python main.py test_cpg_rich.fasta  # has clear CpG islands 
+python main.py test_cpg_poor.fasta  # few or no islands
+python main.py test_mixed_long.fasta # mixed result
+python main.py brca1_sequence.fasta # real BRCA1 gene
+
+# BRCA1 with different window sizes 
+python main.py brca1_sequence.fasta -w 200 # standard
+python main.py brca1_sequence.fasta -w 100 #medium
+python main.py brca1_sequence.fasta -w 50 # small
