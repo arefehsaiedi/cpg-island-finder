@@ -1,4 +1,4 @@
-PS C:\Users\10\Desktop\genomics> python main.py test_fasta/test_cpg_poor.fasta -w 50 -g 0.5 -r 0.6
+PS C:\Users\10\Desktop\genomics> python project.py test_fasta/test_cpg_poor.fasta -w 50 -g 0.5 -r 0.6
 Loading DNA sequence...
 Loaded 392 bases from at_rich_test
 Running analysis for CpG islands...
@@ -18,4 +18,4 @@ summary
 number of islands : 0
 
 no CpG islands found :(
-======================================== 
+========================================

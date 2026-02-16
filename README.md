@@ -4,14 +4,14 @@ Video demo
 Watch the demo here: https://youtu.be/UF-bCUwawfg?si=JaxcpJis2smxkcvw
 
 This repo holds my final project for CS50:
-Introduction to Programming with Python. 
+Introduction to Programming with Python.
 It's a simple Python tool for finding CpG islands in DNA sequences from FASTA files.
 The program reads a DNA sequence, uses a sliding window to calculate GC content and CpG ratios, spots potential islands, merges close ones, and creates a clear text report.
 
 
 Project Overview
 What it does:
-It scans FASTA files for CpG islands with a sliding window. It finds regions above GC and CpG ratio thresholds, then merges nearby islands to avoid splits. 
+It scans FASTA files for CpG islands with a sliding window. It finds regions above GC and CpG ratio thresholds, then merges nearby islands to avoid splits.
 
 Key features:
 - Command-line options for window size (default: 200 bp), GC thresholds (0.5), CpG ratio (0.6), and output file.
@@ -22,7 +22,7 @@ Key features:
 
 Project Structure
 cpg-island-finder/
-- main.py      # Command-line entry point
+- project.py      # Command-line entry point
 - fasta.py     # FASTA parsing
 - analysis.py  # CpG detection logic
 - report.py    # Report creation
@@ -72,7 +72,7 @@ id  start   end    len  GC%   ratio
 2   3821    3890    69     50.0    0.648
 3   4707    4785    78     50.0    0.641
 
-Setup and Usage 
+Setup and Usage
 Just need Python (no install required).
 
 pip install -r requirements.txt   # No external packages required
