@@ -67,13 +67,17 @@ def test_find_cpg_islands():
     print("find_cpg_islands tests passed")
 
 def main():
-    print("Running tests for CpG Island Finder...\n")
+    print("=" * 40)
+    print("Running tests for CpG Island Finder...")
+    print("=" * 40)
 
     test_gc_percent()
     test_cpg_ratio()
     test_find_cpg_islands()
 
-    print("\nAll tests passed.")
+    print("\n" + "=" * 40)
+    print("All tests passed.")
+    print("=" * 40)
 
 if __name__ == "__main__":
     main()
