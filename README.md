@@ -41,10 +41,10 @@ How the Algorithm Works
 
 Quick Demo
 # Test sequence (CpG-rich) - finds one 490 bp island
-python main.py test_fasta/test_cpg_rich.fasta -w 50 -g 0.5 -r 0.6
+python project.py test_fasta/test_cpg_rich.fasta -w 50 -g 0.5 -r 0.6
 
 # BRCA1 gene (real NCBI data) - find multiple islands
-python main.py test_fasta/brca1_sequence.fasta -w 50 -g 0.5 -r 0.6 -o brca1_report.txt
+python project.py test_fasta/brca1_sequence.fasta -w 50 -g 0.5 -r 0.6 -o brca1_report.txt
 
 Test Output
 ===================================
@@ -76,7 +76,7 @@ Setup and Usage
 Just need Python (no install required).
 
 pip install -r requirements.txt   # No external packages required
-python main.py input.fasta [-w 300] [-g 0.55] [-r 0.7] [-o output.txt]
+python project.py input.fasta [-w 300] [-g 0.55] [-r 0.7] [-o output.txt]
 
 Edge cases handled
 - Empty or bad FASTA files.
