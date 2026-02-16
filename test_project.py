@@ -28,6 +28,7 @@ def test_cpg_ratio():
 
     # C and G present but no "CG" dinucleotide
     assert cpg_ratio("ACGT") == 0.0
+    assert cpg_ratio("ACGT") == 0.001
 
     # CpG_rich seq
     assert cpg_ratio("CGCG") > 0
