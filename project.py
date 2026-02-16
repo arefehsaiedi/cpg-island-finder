@@ -40,6 +40,31 @@ def cpg_ratio(seq):
 
     return obs / exp
 
+def merge_islands(islands, max_gap=100):
+    """
+    Merge overlapping or close islands
+    """
+    if not islands:
+        return []
+
+    # sort by start
+    islands.sort(key=lambda x: x[0])
+    merged = []
+    cur_start, cur_end, cur_gc, cur_ratio = islands[0]   # check
+
+    for st, en, gc, r in islands[1:]:
+        if st <= cur_end + max_gap:
+            # extend island
+            cur_end = en
+            cur_gc = (cur_gc + gc) / 2
+            cur_ratio = (cur_ratio + r) / 2
+        else:
+            merged.append((cur_start, cur_end, cur_gc, cur_ratio))  # check
+            cur_start, cur_end, cur_gc, cur_ratio = st, en, gc, r      # check
+
+    merged.append((cur_start, cur_end, cur_gc, cur_ratio))
+    return merged
+
 def find_cpg_islands(seq, window_size=200, step=1, min_gc=50.0, min_ratio=0.6, do_merge=True):
         """
         Sliding window CpG island finder
@@ -133,6 +158,3 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
-
-
-
