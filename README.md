@@ -22,9 +22,9 @@ Key features:
 
 Project Structure
 cpg-island-finder/
-- project.py      # Command-line entry point
+- project.py      # Command-line entry point and core CpG analysis function
 - fasta.py     # FASTA parsing
-- analysis.py  # CpG detection logic
+- analysis.py  # Originally contained detection logic (moved to project.py to meet CS50 requirments)
 - report.py    # Report creation
 - README.md    # This doc
 - requirements.txt  # No dependencies
