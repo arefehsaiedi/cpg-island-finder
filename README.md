@@ -31,6 +31,7 @@ cpg-island-finder/
 - usage.txt    # Quick examples
 - test_fasta   # Test files
 - example_outputs   # Sample reports
+- test_project.py  #
 
 How the Algorithm Works
 - Slide a fixed window along the DNA sequence.
