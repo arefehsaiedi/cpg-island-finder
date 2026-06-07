@@ -105,17 +105,17 @@ cpg-island-finder/
 
 # Quick Demo
 
-# Test sequence (CpG-rich) - finds one 490 bp island
+- Test sequence (CpG-rich) - finds one 490 bp island
 
 python project.py test_fasta/test_cpg_rich.fasta -w 50 -g 0.5 -r 0.6
 
 
-# BRCA1 gene (real NCBI data) - find multiple islands
+- BRCA1 gene (real NCBI data) - find multiple islands
+<img width="800" alt="First few lines of BRCA1 FASTA file showing sequence header and DNA bases" src="https://github.com/user-attachments/assets/f51f5e26-80fa-486b-8ff0-c4729cd17d3e" />
 
 python project.py test_fasta/brca1_sequence.fasta -w 50 -g 0.5 -r 0.6 -o brca1_report.txt
 
 
-<img width="800" alt="First few lines of BRCA1 FASTA file showing sequence header and DNA bases" src="https://github.com/user-attachments/assets/f51f5e26-80fa-486b-8ff0-c4729cd17d3e" />
 
 # Test Output
 
