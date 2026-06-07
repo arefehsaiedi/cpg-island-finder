@@ -1,109 +1,184 @@
-CpG Island Finder - CS50 Final Project
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 
-Video demo
-Watch the demo here: https://youtu.be/UF-bCUwawfg?si=JaxcpJis2smxkcvw
+![Status](https://img.shields.io/badge/status-completed-brightgreen)
 
-This repo holds my final project for CS50:
-Introduction to Programming with Python.
-It's a simple Python tool for finding CpG islands in DNA sequences from FASTA files.
-The program reads a DNA sequence, uses a sliding window to calculate GC content and CpG ratios, spots potential islands, merges close ones, and creates a clear text report.
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 
-Project Overview
+
+# CpG Island Finder 
+
+### A Python Tool for Introductory Genomic Sequence Analysis 
+
+
+
+CpG Island Finder is a Python-based bioinformatics tool developed as the final project for Harvard University’s CS50: Introduction to Programming with Python. 
+
+
+The program analyses DNA sequences in FASTA format and identifies potential CpG islands using a sliding-window approach based on GC content and observed/expected CpG ratios. The project combines programming fundamentals with concepts from genomics, epigenetics, and molecular genetics.
+
+
+# Biological Background 
+
+CpG islands are genomic regions enriched in CpG dinucleotides and characterized by elevated GC content. They are commonly associated with gene promoters and play important roles in gene regulation, DNA methylation, cancer biology, and epigenetics.
+
+
+This project was designed as an educational introduction to computational genomics, demonstrating how Python can be applied to biological sequence analysis.
+
+
+
+# Repository Highlights 
+
+- Developed as the final project for Harvard University’s CS50: Introduction to Programming with Python. 
+
+- Implements a complete CpG island detection workflow from FASTA parsing to report generation. 
+
+- Tested on both synthetic datasets and real human genomic sequences (BRCA1).
+
+- Built entirely with Python standard libraries.
+
+- Developed and documented on GitHub using version control practices.
+
+
+
+# Project Overview
+
 What it does:
+
 It scans FASTA files for CpG islands with a sliding window. It finds regions above GC and CpG ratio thresholds, then merges nearby islands to avoid splits.
 
-Key features:
+
+
+# Key features
+
 - Command-line options for window size (default: 200 bp), GC thresholds (0.5), CpG ratio (0.6), and output file.
+
 - Handles test sequences and real data like BRCA1.
+
 - Built with four main Python files for modularity.
+
 - Produces easy-to-read reports with stats, island tables, and sequence snippets.
+
 - Uses only Python's standard library (no extra install needed).
 
-Project Structure
+
+
+# Project Structure
+
 cpg-island-finder/
-- project.py      # Command-line entry point and core CpG analysis function
+
+- project.py   # Command-line entry point and core CpG analysis function
+
 - fasta.py     # FASTA parsing
-- analysis.py  # Originally contained detection logic (moved to project.py to meet CS50 requirments)
+
+- analysis.py  # Helper functions (optional)
+
 - report.py    # Report creation
+
 - README.md    # This doc
+
 - requirements.txt  # No dependencies
+
 - usage.txt    # Quick examples
+
 - test_fasta   # Test files
+
 - example_outputs   # Sample reports
+
 - test_project.py  # Simple unit tests for my function
 
-How the Algorithm Works
+
+
+# How the Algorithm Works
+
 - Slide a fixed window along the DNA sequence.
+
 - Calculate GC% and observed/expected CpG ratio per window.
+
 - Filter by user thresholds.
+
 - Merge overlapping or close islands (max gap: 100 bp).
+
 - Output islands with positions, length, GC%, ratio, and preview.
 
-Quick Demo
+
+
+# Quick Demo
+
 # Test sequence (CpG-rich) - finds one 490 bp island
+
 python project.py test_fasta/test_cpg_rich.fasta -w 50 -g 0.5 -r 0.6
 
+
 # BRCA1 gene (real NCBI data) - find multiple islands
+
 python project.py test_fasta/brca1_sequence.fasta -w 50 -g 0.5 -r 0.6 -o brca1_report.txt
 
-Test Output
-===================================
-===================================
-CpG islands finder
-===================================
-sequence : NM_007294.4 Homo sapiens BRCA1 DNA repair associated (BRCA1), transcript variant 1, mRNA
-length : 7088 bp
-time : 2026-02-10 18:24:59:
 
-summary
-------
-number of islands : 3
-total islands bp    : 197 bp
-coverage            : 2.78%
-avg length          : 65.7 bp
-avg GC              : 50.00%
-avg CpG ratio       : 0.652
+<img width="800" alt="First few lines of BRCA1 FASTA file showing sequence header and DNA bases" src="https://github.com/user-attachments/assets/f51f5e26-80fa-486b-8ff0-c4729cd17d3e" />
 
-islands (positions are 0-based):
---------------------------------
-id  start   end    len  GC%   ratio
---  -----   -----  ---- ----- -----
-1   508     558     50     50.0    0.667
-2   3821    3890    69     50.0    0.648
-3   4707    4785    78     50.0    0.641
+# Test Output
 
-Setup and Usage
+<img width="800" alt="brca1_output" src="https://github.com/user-attachments/assets/40fe6d82-6f01-4c6c-8198-3915406db097" />
+
+
+# Setup and Usage
+
 Just need Python (no install required).
 
-pip install -r requirements.txt   # No external packages required
 python project.py input.fasta [-w 300] [-g 0.55] [-r 0.7] [-o output.txt]
 
-Edge cases handled
+
+
+# Edge cases handled
+
 - Empty or bad FASTA files.
+
 - Invalid DNA letters.
+
 - No CpG islands found.
+
 - Overlapping or close regions.
 
-What I Learned
-- Basic Bioinformatics: CpG islands, GC content, ratios.
-- Sliding window techniques for sequences.
-- Modular Python code that's easy to maintain.
-- Parsing FASTA and checking bio data.
-- Creating clear scientific reports.
-- Testing with fake and real sequences.
 
-Future Ideas
+
+# What I Learned
+
+- Applying Python programming to biological sequence analysis.
+
+- Working with genomic data in FASTA format.
+
+- Implementing sliding-window algorithms for feature detection.
+
+- Designing modular and maintainable scientific software.
+
+- Generating reproducible analysis reports.
+
+- Connecting concepts from genomics, epigenetics, and molecular genetics with computational methods.
+
+
+
+# Future Ideas
+
 - Add plots for GC and islands (using matplotlib).
+
 - Multi-FASTA support.
+
 - JSON/CSV outputs.
+
 - Speed up for big genomes.
 
-Acknowledgments
-- CS50 (Harvard) for the programming basics.
-- Gardiner-Garden & Frommer for CpG criteria.
-- NCBI for free genomic data.
-- Python community for docs and help.
 
-This project let me use CS50 skills on a real bioinformatics task. Building the detector from scratch helped with modularity, CLI tools, and algorithms, plus an introdution to genomics.
-It shows how Python makes simple, reliable tools for bio data analysis in a class setting.
+
+# Acknowledgments
+
+- CS50 team (Harvard) - for the programming basics.
+
+- Gardiner-Garden & Frommer - for the classic CpG island criteria.
+
+- NCBI - for providing free genomic data (BRCA1 sequence).
+
+- Python community - for excellent documentation and support.
+
+
+This project allowed me to combine my interest in genetics with programming while gaining hands-on experience in bioinformatics and genomic sequence analysis. It represents my first step toward applying computational approaches to molecular biology research.
